@@ -1,4 +1,5 @@
 import base64
+import json
 import os
 from datetime import datetime
 from typing import Union
@@ -465,6 +466,11 @@ def trading_212_get(base_url: str, path: str, api_key: str, api_secret: str):
     )
     response.raise_for_status()
     return response.json()
+
+
+def load_sample_json(path: str):
+    with open(path, "r", encoding="utf-8") as handle:
+        return json.load(handle)
 
 
 def get_secret(name: str, default: str = "") -> str:
@@ -1124,7 +1130,9 @@ with st.sidebar:
         type="password",
         value=get_secret("TRADING212_API_SECRET"),
     )
-    connect = st.button("Connect Trading 212")
+    connect_col, sample_col = st.columns(2)
+    connect = connect_col.button("Connect Trading 212")
+    load_sample = sample_col.button("Load sample portfolio")
 
 period_config = TIME_PERIODS[selected_period]
 if not use_demo_mode:
@@ -1312,7 +1320,25 @@ if connect:
                 st.code(body)
         except Exception as exc:
             st.error(f"Trading 212 request failed: {exc}")
-else:
+if load_sample:
+    try:
+        sample_root = os.path.join(os.path.dirname(__file__), "sample_data")
+        st.session_state["t212_environment"] = "Sample portfolio"
+        st.session_state["t212_account_summary"] = load_sample_json(
+            os.path.join(sample_root, "t212_account_summary.json")
+        )
+        st.session_state["t212_positions"] = load_sample_json(
+            os.path.join(sample_root, "t212_positions.json")
+        )
+        st.success("Loaded sample Trading 212 portfolio.")
+    except Exception as exc:
+        st.error(f"Could not load sample portfolio: {exc}")
+if (
+    not connect
+    and not load_sample
+    and "t212_account_summary" not in st.session_state
+    and "t212_positions" not in st.session_state
+):
     st.info(
         "When you are ready, create a Trading 212 API key with read-only permissions "
         "and connect your live Trading 212 portfolio."

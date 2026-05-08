@@ -1,0 +1,170 @@
+[
+  {
+    "instrument": {
+      "ticker": "IONQ_US_EQ",
+      "name": "IonQ",
+      "isin": "US46222L1089",
+      "currency": "USD"
+    },
+    "createdAt": "2025-10-28T15:30:03.000+02:00",
+    "quantity": 1.1391936,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 1.1391936,
+    "currentPrice": 47.79,
+    "averagePricePaid": 59.5157838,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 51.48,
+      "currentValue": 40.12,
+      "unrealizedProfitLoss": -11.36,
+      "fxImpact": -1.52
+    }
+  },
+  {
+    "instrument": {
+      "ticker": "MSFT_US_EQ",
+      "name": "Microsoft",
+      "isin": "US5949181045",
+      "currency": "USD"
+    },
+    "createdAt": "2024-07-11T14:08:19.000+02:00",
+    "quantity": 7.4251,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 7.4251,
+    "currentPrice": 423.84,
+    "averagePricePaid": 356.11,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 2096.63,
+      "currentValue": 2485.17,
+      "unrealizedProfitLoss": 388.54,
+      "fxImpact": 46.19
+    }
+  },
+  {
+    "instrument": {
+      "ticker": "NVDA_US_EQ",
+      "name": "NVIDIA",
+      "isin": "US67066G1040",
+      "currency": "USD"
+    },
+    "createdAt": "2024-08-21T13:11:47.000+02:00",
+    "quantity": 4.812,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 4.812,
+    "currentPrice": 118.55,
+    "averagePricePaid": 92.63,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 354.11,
+      "currentValue": 428.47,
+      "unrealizedProfitLoss": 74.36,
+      "fxImpact": 8.42
+    }
+  },
+  {
+    "instrument": {
+      "ticker": "BRK-B_US_EQ",
+      "name": "Berkshire Hathaway Class B",
+      "isin": "US0846707026",
+      "currency": "USD"
+    },
+    "createdAt": "2024-03-04T09:52:00.000+01:00",
+    "quantity": 5.5014,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 5.5014,
+    "currentPrice": 468.93,
+    "averagePricePaid": 402.46,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 1772.43,
+      "currentValue": 2056.51,
+      "unrealizedProfitLoss": 284.08,
+      "fxImpact": 23.74
+    }
+  },
+  {
+    "instrument": {
+      "ticker": "SNP_US_EQ",
+      "name": "Sinopec Shanghai Petrochemical Co.",
+      "isin": "US82935M1099",
+      "currency": "USD"
+    },
+    "createdAt": "2023-11-18T18:22:31.000+01:00",
+    "quantity": 62.0,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 62.0,
+    "currentPrice": 50.44,
+    "averagePricePaid": 46.88,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 2267.81,
+      "currentValue": 2439.66,
+      "unrealizedProfitLoss": 171.85,
+      "fxImpact": -14.03
+    }
+  },
+  {
+    "instrument": {
+      "ticker": "PLTR_US_EQ",
+      "name": "Palantir Technologies",
+      "isin": "US69608A1088",
+      "currency": "USD"
+    },
+    "createdAt": "2024-12-02T16:45:09.000+01:00",
+    "quantity": 18.7502,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 18.7502,
+    "currentPrice": 26.33,
+    "averagePricePaid": 29.81,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 438.19,
+      "currentValue": 390.62,
+      "unrealizedProfitLoss": -47.57,
+      "fxImpact": -6.91
+    }
+  },
+  {
+    "instrument": {
+      "ticker": "TSLA_US_EQ",
+      "name": "Tesla",
+      "isin": "US88160R1014",
+      "currency": "USD"
+    },
+    "createdAt": "2024-06-09T12:05:14.000+02:00",
+    "quantity": 6.3249,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 6.3249,
+    "currentPrice": 179.24,
+    "averagePricePaid": 211.66,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 1067.71,
+      "currentValue": 901.37,
+      "unrealizedProfitLoss": -166.34,
+      "fxImpact": -21.66
+    }
+  },
+  {
+    "instrument": {
+      "ticker": "GOOGL_US_EQ",
+      "name": "Alphabet Class A",
+      "isin": "US02079K3059",
+      "currency": "USD"
+    },
+    "createdAt": "2024-04-27T10:14:20.000+02:00",
+    "quantity": 9.955,
+    "quantityAvailableForTrading": 0,
+    "quantityInPies": 9.955,
+    "currentPrice": 167.82,
+    "averagePricePaid": 141.37,
+    "walletImpact": {
+      "currency": "GBP",
+      "totalCost": 1113.42,
+      "currentValue": 1328.87,
+      "unrealizedProfitLoss": 215.45,
+      "fxImpact": 18.03
+    }
+  }
+]
