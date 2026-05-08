@@ -42,3 +42,16 @@ Then open `http://localhost:5173`.
 - Add a Python data fetcher for Stooq as an optional API-key provider
 - Cache daily data in SQLite
 - Add a proper backend with FastAPI
+
+## T212 integration 
+
+### Screenshots
+
+#### Dashboard
+![Dashboard](screenshots/Screenshot%202026-05-08%20at%201.45.02%E2%80%AFPM.png)
+
+#### Portfolio
+![Portfolio](screenshots/Screenshot%202026-05-08%20at%201.46.40%E2%80%AFPM.png)
+
+#### Benchmark Comparison
+![Benchmark Comparison](screenshots/Screenshot%202026-05-08%20at%201.47.28%E2%80%AFPM.png)
