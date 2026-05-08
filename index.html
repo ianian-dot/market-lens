@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Lens</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Market Lens</p>
+          <h1>Explore stocks like a data product, not a spreadsheet.</h1>
+          <p class="hero-copy">
+            Compare prices, risk, drawdowns, momentum, and portfolio exposure
+            using a small local dataset. No API key required.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <label for="ticker-select">Focus ticker</label>
+          <select id="ticker-select"></select>
+          <div class="data-actions">
+            <button id="fetch-live-data" class="primary-button">Fetch Stooq data</button>
+            <button id="use-demo-data" class="ghost-button">Use demo data</button>
+          </div>
+          <p id="data-status" class="data-status">Demo data is loaded.</p>
+          <div class="focus-stats" id="focus-stats"></div>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Price history</h2>
+              <p>Normalized to 100 so different stocks are comparable.</p>
+            </div>
+            <div class="segmented" role="group" aria-label="Chart mode">
+              <button class="mode-button active" data-chart-mode="price">Price</button>
+              <button class="mode-button" data-chart-mode="drawdown">Drawdown</button>
+            </div>
+          </div>
+          <canvas id="price-chart" width="900" height="420"></canvas>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Portfolio lab</h2>
+              <p>Change weights and see the risk profile update.</p>
+            </div>
+          </div>
+          <div id="weights"></div>
+          <div class="portfolio-summary" id="portfolio-summary"></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Stock screener</h2>
+            <p>Simple ranking model: return, momentum, volatility, and max drawdown.</p>
+          </div>
+          <button id="reset-weights" class="ghost-button">Equal weight</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Total return</th>
+                <th>30-day momentum</th>
+                <th>Annual vol</th>
+                <th>Max drawdown</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="screener-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel lesson-panel">
+        <div>
+          <h2>Coding lesson hiding inside this app</h2>
+          <p>
+            A stock app is mostly arrays: map prices into returns, reduce returns
+            into risk metrics, then render those numbers into UI.
+          </p>
+        </div>
+        <pre><code>const returns = prices.slice(1).map((price, i) =>
+  price / prices[i] - 1
+);
+
+const volatility = standardDeviation(returns) * Math.sqrt(252);</code></pre>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
